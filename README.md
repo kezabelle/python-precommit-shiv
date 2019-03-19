@@ -2,6 +2,7 @@
 
 ```
 docker build -t "precommit:build" .
+docker create "precommit:build"
+docker cp <HASH>:/artifacts/precommit.pyz /path/to/.git/hooks/pre-commit
 ```
-
-Then grab the file from `/artifacts/precommit.pyz`
+It requires py3.6 be on the path :(

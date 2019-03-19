@@ -7,5 +7,5 @@ RUN pip install shiv pex
 WORKDIR /wheels
 RUN pip download pre-commit
 WORKDIR /artifacts
-RUN shiv -o precommit.pyz --find-links /wheels --no-index pre-commit --entry-point="pre_commit.main:main" --python="/usr/bin/env python3"
-RUN pex -o precommit.pex --find-links /wheels --no-index pre-commit --entry-point="pre_commit.main:main" --python-shebang="/usr/bin/env python3"
+RUN shiv -o precommit.pyz --find-links /wheels --no-index pre-commit --entry-point="pre_commit.main:main" --python="/usr/bin/env python3.6"
+#RUN pex -o precommit.pex --find-links /wheels --no-index pre-commit --entry-point="pre_commit.main:main" --python-shebang="/usr/bin/env python3"
